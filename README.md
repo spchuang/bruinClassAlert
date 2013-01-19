@@ -17,12 +17,10 @@ Installation
 3.  Add the classes you want to target in setting.py (make sure to follow the template format)
 
 4.  run:
-      $ python bruinClassAlert.py
-and then run:
 
-    $ python setup.py install
 
-Yo
+    $ python bruinClassAlert.py
+
 
 Settings
 ------------
