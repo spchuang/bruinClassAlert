@@ -18,7 +18,11 @@ Installation
 
 4.  run:
       $ python bruinClassAlert.py
+and then run:
 
+    $ python setup.py install
+
+Yo
 
 Settings
 ------------
