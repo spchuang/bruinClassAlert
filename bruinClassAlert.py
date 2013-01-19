@@ -49,14 +49,7 @@ def sendMsg(to, text):
 
 
 if __name__ == '__main__':
-    
-    
-    #print getBruinSchedule.get_class_info(term, major, crs)
-    
-    # python 3: exec(open("example.conf").read(), config)
 
-    #print config["NAME"]
-    #print config["CLASSES"]
     while config['CLASSES_ALERT']:
         print ("checking...\n")
         for C_ALERTS in config['CLASSES_ALERT']:
