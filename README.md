@@ -18,9 +18,9 @@ Installation
 
 4.  run:
 
-
     $ python bruinClassAlert.py
-
+    
+5.  Leave it runnning until you get into all your classes!
 
 Settings
 ------------
