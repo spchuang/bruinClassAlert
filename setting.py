@@ -1,3 +1,5 @@
+#NOTE: Everytime this file is updated, rerun the python scrpit again (make sure to remove classes you no longer need to target!)
+
 #CARRIER SMS GATEWAY
 ATT     = "@txt.att.net"
 SPRINT  = "@messaging.sprintpcs.com"
@@ -15,9 +17,8 @@ PHONE = "123456789"
 USE_PHONE = True
 CARRIER = "TMOBILE"
 
-#Clases to Alert 
+#Clases to Alert (when enroll < cap)
 #sec_num: all, 1b (all checks for lecture)
-#alert rule: open (enroll < cap) This option is useless rightnow
 #once alerted, the rule will be removed from application (in the application memory but config file is unchanged)
 
 #-------EXAMPLE  (follow the format)-------
@@ -37,15 +38,13 @@ CLASSES_ALERT.append({"term" : "13W",
                 "major" : "COM+SCI",
                 "course" : "0112++++",
                 "lec_num" : 1,
-                "sec_num" : "1A",
-                "alert" : "open"
+                "sec_num" : "all",
                 })
 CLASSES_ALERT.append({"term" : "13W",
                 "major" : "COM+SCI",
                 "course" : "0143++++",
                 "lec_num" : 1,
                 "sec_num" : "1C",
-                "alert" : "open"
                 })
 
 #add more by appending to CLASSES using the same style (all fields must be filled up)

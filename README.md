@@ -16,4 +16,46 @@ Installation
 
 3.  Add the classes you want to target in setting.py (make sure to follow the template format)
 
-4.  run "python bruinClassAlert.py"
+4.  run python bruinClassAlert.py
+
+
+Settings
+------------
+1.  Gmail Setting: This application uses simple python SMTP server to send message to your email and phone. We need to use a working GMail for the outgoing SMTP server and it requires some authorization of the account.
+
+    ```python
+    GMAIL_USER = "user@gmail.com"
+    GMAIL_PWD  = "pwd"
+
+    ```
+2.  Contact Settings: Setting for methods and customization of your contact information
+    
+    ```python
+    EMAIL = "test@gmail.com"
+    USE_EMAIL = True
+    PHONE = "123456789"
+    USE_PHONE = True
+    CARRIER = "TMOBILE"
+
+    ```
+    Note: Carrier name must follow the definition in the setting file: 
+    
+    ```python
+    ATT     = "@txt.att.net"
+    SPRINT  = "@messaging.sprintpcs.com"
+    TMOBILE = "@tmomail.net"
+    VERIZON = "@vtext.com"
+    ```
+
+3.  Add the classes you want to target: Specify the term, major, course id of your target course. This information could be found from the url parameters on the registrar website. Also specify the lecture number (in integer) and the section number (in string). Section number could also be "all", which tells the program to notify open spot for the entire lecture.
+
+    
+    ```python
+    CLASSES_ALERT.append({"term" : "13W",
+                "major" : "COM+SCI",
+                "course" : "0112++++",
+                "lec_num" : 1,
+                "sec_num" : "1A",
+                })
+    ```
+
