@@ -63,3 +63,7 @@ Settings
                 })
     ```
 
+Requirements
+------------
+*  Python version 2.7 or newer
+*  BeautifulSoup Module version 3.2.1
