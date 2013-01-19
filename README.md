@@ -12,14 +12,9 @@ Installation
 ------------
 1.  Clone or download the repo
 
-2.  Download and install BeautifulSoup (http://www.crummy.com/software/BeautifulSoup/)
-    NOTE: Beautiful Soup 4 has some problem while importing the module, use this instead:
+2.  Download and install BeautifulSoup 3.2.1 (http://www.crummy.com/software/BeautifulSoup/)
+    NOTE: There's some problem with Beautiful Soup 4 while parsing the school webpage.
     
-    ```python
-    from bs4 import BeautifulSoup
-
-    ```
-
 3.  Set up the correct contact (email/phone) information in setting.py and add the classes you want to target (make sure to follow the template format)
 
 4.  run:
