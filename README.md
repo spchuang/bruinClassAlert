@@ -12,9 +12,9 @@ Installation
 ------------
 1.  Clone or download the repo
 
-2.  Set up the correct contact (email/phone) information in setting.py
+2.  Download and install BeautifulSoup
 
-3.  Add the classes you want to target in setting.py (make sure to follow the template format)
+3.  Set up the correct contact (email/phone) information in setting.py and add the classes you want to target (make sure to follow the template format)
 
 4.  run:
 
