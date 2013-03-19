@@ -51,13 +51,17 @@ def sendMsg(to, text):
 if __name__ == '__main__':
 
     while config['CLASSES_ALERT']:
-        print ("checking...\n")
+        print ("checking...")
         for C_ALERTS in config['CLASSES_ALERT']:
-            c_info = getBruinSchedule.get_class_info(C_ALERTS['term'], \
-                                                     C_ALERTS['major'], \
-            
-                                                     C_ALERTS['course'])
-            
+            try:
+                 c_info = getBruinSchedule.get_class_info(C_ALERTS['term'], \
+                                                         C_ALERTS['major'], \
+                                                         C_ALERTS['course'])
+            except:
+		print("Error reading the schedule: ")
+                print "Check again in ... ", config['CHECK_EVERY_SEC'], "seconds"
+                time.sleep(config['CHECK_EVERY_SEC'])
+                continue
             #check if it's the lecture number we want to alert
             for lec in c_info["lectures"]:
                 if int(lec["sec"]) == C_ALERTS['lec_num']:
@@ -96,4 +100,3 @@ if __name__ == '__main__':
                     
         #check every 15 seconds
         time.sleep(config['CHECK_EVERY_SEC'])
-    
